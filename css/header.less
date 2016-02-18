@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+.headerTop{
+  height: @th;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  min-width: 1000px;
+
+}
+header {
+  @h: 591px;
+  height: @h;
+  position: relative;
+  .top {
+    width: @aW;
+    height: @th;
+    position: relative;
+    .logo {
+      /*position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -141px;*/
+      z-index: 3;
+      margin-left: 20px;
+      .cl();
+      .fl;
+      a {
+        display: block;
+        float: left;
+        color: #ffffff;
+        margin-top: 20px;
+      }
+      img{
+        float: left;
+      }
+      div{
+        .fl();
+        margin-left: 13px;
+      }
+      p{
+        font-size: 33px;
+        height: 50px;
+        line-height: 50px;
+      }
+      span{
+        font-size: 17px;
+
+      }
+
+    }
+    .logoBg {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -200px;
+      z-index: 1
+    }
+    ul {
+      position: relative;
+      z-index: 2;
+      .fl;
+    }
+    li {
+      float: left;
+      a {
+        color: #fff;
+        display: block;
+        height: @th - 30;
+        text-align: center;
+        font-size: 17px;
+        padding: 0 22px;
+        padding-top: 30px;
+        font-weight: bold;
+        &:hover span{
+          color: red;
+        }
+      }
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: normal;
+      }
+
+    }
+
+
+  }
+
+
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+//右边二维码飘窗
+.r_pop{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  margin-top: -255px;
+  width: 215px;
+  height: 515px;
+  z-index: 999;
+  background:url("../img/r_bg.png") no-repeat;
+  h3{
+    background: url("../img/r_h3.png") no-repeat 30px 0;
+    height:33px;
+    text-indent: -999em;
+    margin-top: 10px;
+  }
+  &ul1{
+    width: 173px;
+    margin: 0px auto;
+    li{
+      float: left;
+      width: 86px;
+      height: 20px;
+      line-height: 20px;
+
+    }
+    a{
+      display: block;
+      background: url("../img/r_h4.png") no-repeat;
+      height: 20px;
+
+
+    }
+    .a(@obj,@oC:#fff){
+      background-position: 4px @obj;
+      padding-left: 30px;
+      color:@oC;
+      font-size: 14px;
+      font-weight: bold;
+      &.curr,&:hover{
+        background:#ffffff url("../img/r_h4.png") no-repeat 4px @obj;
+        color: #000;
+      }
+    }
+    .ios{
+      a{
+        .a(-40px);
+      &.curr,&:hover{
+        background:#ffffff url("../img/r_h4.png") no-repeat 4px 0px !important;
+      }
+      }
+
+    }
+    .and{
+      a{
+        .a(-21px)
+      }
+    }
+
+    .cl()
+  }
+  &ul2{
+    background: #fff;
+    position: relative;
+    height: 192px;
+    width: 173px;
+    margin: 0px auto;
+    li{
+      position: absolute;
+      left: 15px;
+      top: 24px;
+      z-index: 9;
+    }
+
+  }
+  &wx{
+    height: 168px;
+    width: 173px;
+    background: #fff;
+    margin: 0px auto;
+    padding-top: 24px;
+    margin-top: 4px;
+  ;
+    img{
+      display: block;
+      margin: 0px auto;
+
+    }
+  }
+  h3&gz{
+    background-position: 30px -39px;
+
+  }
+  &Btn{
+    position: absolute;
+    left:-42px;
+    top: 50%;
+    margin-top: -45px;
+  }
+}
